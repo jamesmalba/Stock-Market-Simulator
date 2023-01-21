@@ -1,0 +1,10 @@
+<h1>{{ stock.name }}</h1>
+<p>Price: {{ stock.price }}</p>
+<p>Quantity: {{ stock.quantity }}</p>
+<h2>Trade History</h2>
+<ul>
+  {% for trade in trades %}
+    <li>{{ trade.date }} - {{ trade.price }} - {{ trade.quantity }}</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'stock_update' stock.pk %}">Update</a>

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Trade Confirmation</h1>
+  <p>Stock Symbol: {{ trade.stock.symbol }}</p>
+  <p>Quantity: {{ trade.quantity }}</p>
+  <p>Price: {{ trade.price }}</p>
+  <p>Date: {{ trade.date }}</p>
+{% endblock %}
