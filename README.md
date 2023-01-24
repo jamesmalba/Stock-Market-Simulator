@@ -7,4 +7,4 @@ Future features to be added:
 - The ability to simulate the performance of your portfolio by fast-forwarding by the time period of your chosing.
 - A proper authentication system for users to create their own account and login. 
 - Ability to create alerts
-- Limit order, market order, stop limit, etc. 
+- Different types of orders
