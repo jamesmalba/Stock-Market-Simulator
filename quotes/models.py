@@ -7,8 +7,9 @@ class Stock(models.Model):
     market_cap = models.DecimalField(max_digits = 10, decimal_places = 2, default = 0.00)
     cost = models.DecimalField(max_digits = 10, decimal_places = 2, default = 0.00)
     limit_price = models.DecimalField(max_digits = 10, decimal_places = 2, default = 0.00)
-    change = models.DecimalField(max_digits = 10, decimal_places = 2)
+    change = models.DecimalField(max_digits = 10, decimal_places = 2, default = 0.00)
     amount_owned = models.IntegerField(default = 0)
+    order_amount = models.IntegerField(default = 0)
 
 class Portfolio(models.Model):
     balance = models.DecimalField(max_digits = 10, decimal_places = 2, default = 10000.00)

@@ -37,21 +37,20 @@
       <div class="forms-container">
         <div class="form-center">
           <h3>Buy Stock</h3>
-          <form method="post" class="form-inline">
+          <form method="post" action="{% url 'stock_transaction' %}" class="form-inline">
             {% csrf_token %}
+            <input type="hidden" name="buy_stock" value="buy">
             <div class="block">
               <input class="form-control" id="add_stock" type="text"
-                name="add_stock" placeholder="Symbol" value="{{ add_stock }}">
+                name="symbol" placeholder="Symbol" value="{{ add_stock }}">
             </div>
             <div class="block" class="form-group">
               <input class="form-control" id="stocks_bought" type="text"
-                name="stocks_bought" placeholder="Amount" value="{{
-                stocks_bought }}">
+                name="amount" placeholder="Amount">
             </div>
             <div class="block" class="form-group">
               <input class="form-control" id="buying_price" type="text"
-                name="buying_price" placeholder="Limit Price" value="{{
-                buying_price }}">
+                name="price" placeholder="Limit Price">
             </div>
             <div class="block" class="form-group">
               <input id="form-ok-btn" class="btn btn-outline-primary btn-sm"
@@ -70,21 +69,20 @@
 
         <div class="form-center">
           <h3>Sell Stock</h3>
-          <form method="post" class="form-inline">
+          <form method="post" action="{% url 'stock_transaction' %}"
+            class="form-inline">
             {% csrf_token %}
             <div class="block">
               <input class="form-control" id="add_stock" type="text"
-                name="add_stock" placeholder="Symbol" value="{{ add_stock }}">
+                name="symbol" placeholder="Symbol" value="{{ add_stock }}">
             </div>
             <div class="block" class="form-group">
               <input class="form-control" id="stocks_bought" type="text"
-                name="stocks_bought" placeholder="Amount" value="{{
-                stocks_bought }}">
+                name="amount" placeholder="Amount">
             </div>
             <div class="block" class="form-group">
               <input class="form-control" id="buying_price" type="text"
-                name="buying_price" placeholder="Limit Price" value="{{
-                buying_price }}">
+                name="price" placeholder="Limit Price">
             </div>
             <div class="block" class="form-group">
               <input id="form-ok-btn" class="btn btn-outline-primary btn-sm"
